@@ -1,6 +1,9 @@
 bin/
 obj/
+<<<<<<< HEAD
 .vs/
+=======
+>>>>>>> bf36985 (First PoolDinner Application Project Commit)
 .vscode/
 *.dll
 *.exe
