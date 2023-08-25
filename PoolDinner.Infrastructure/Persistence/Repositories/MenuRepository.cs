@@ -1,15 +1,22 @@
-﻿using PoolDinner.Application.Common.Interfaces.Persistence;
+﻿using Microsoft.EntityFrameworkCore;
+
+using PoolDinner.Application.Common.Interfaces.Persistence;
 using PoolDinner.Domain.MenuAggregate;
 
 namespace PoolDinner.Infrastructure.Persistence.Repositories
 {
     public class MenuRepository: IMenuRepository
     {
-        private static readonly List<Menu> _menus = new();
+        private readonly DbContext _dbContext;
 
+        public MenuRepository(DbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
         public void Add(Menu menu)
         {
-            _menus.Add(menu);
+            _dbContext.Add(menu);
+            _dbContext.SaveChanges();
         }
     }
 }
