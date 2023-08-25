@@ -8,6 +8,8 @@ using PoolDinner.Infrastructure.Persistence.Repositories;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Options;
+using PoolDinner.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace PoolDinner.Application;
 
@@ -22,6 +24,7 @@ public static class DependencyInjection
 
     public static IServiceCollection AddPersistance(this IServiceCollection services)
     {
+        services.AddDbContext<PoolDinnerDbContext>(options => options.UseSqlServer(/*Connection String*/));
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         return services;
