@@ -30,7 +30,7 @@ namespace PoolDinner.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MenuDinnerIds",
+                name: "MenuDinnerIds", 
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
