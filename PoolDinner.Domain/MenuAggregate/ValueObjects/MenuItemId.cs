@@ -11,6 +11,11 @@ namespace PoolDinner.Domain.MenuAggregate.ValueObjects
             Value = value;
         }
 
+        public static MenuItemId Create(Guid id)
+        {
+            return new(id);
+        }
+
         public static MenuItemId CreateUnique()
         {
             return new(Guid.NewGuid());

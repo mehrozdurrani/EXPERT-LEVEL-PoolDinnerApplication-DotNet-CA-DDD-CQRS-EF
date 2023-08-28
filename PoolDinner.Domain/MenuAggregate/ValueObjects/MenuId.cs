@@ -11,10 +11,16 @@ namespace PoolDinner.Domain.MenuAggregate.ValueObjects
             Value = value;
         }
 
+        public static MenuId Create(Guid value)
+        {
+            return new MenuId(value);
+        }
+
         public static MenuId CreateUnique()
         {
             return new(Guid.NewGuid());
         }
+
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;

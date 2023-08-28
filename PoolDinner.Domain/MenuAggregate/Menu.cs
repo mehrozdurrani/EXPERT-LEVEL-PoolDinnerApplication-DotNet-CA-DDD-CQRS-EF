@@ -28,21 +28,10 @@ namespace PoolDinner.Domain.MenuAggregate
 
         public DateTime UpdatedDateTime { get; init; }
 
-        public IReadOnlyList<MenuSection> Sections()
-        {
-            return _sections.AsReadOnly();
-        }
-
-        public IReadOnlyList<DinnerId> DinnerIds()
-        {
-            return _dinnerIds.AsReadOnly();
-        }
-
-        public IReadOnlyList<MenuReviewId> MenuReviewIds()
-        {
-            return _menuReviewIds.AsReadOnly();
-        }
-
+        public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
+        public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+        public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
+        
         private Menu(MenuId id,
             HostId hostId,
             string name,
