@@ -5,9 +5,9 @@ namespace PoolDinner.Domain.MenuAggregate.Entities
 {
     public sealed class MenuItem : Entity<MenuItemId>
     {
-        public string Name { get; init; }
+        public string Name { get; private set; }
 
-        public string Description { get; init; }
+        public string Description { get; private set; }
 
         private MenuItem(MenuItemId id, string name, string description) : base(id)
         {
@@ -19,5 +19,10 @@ namespace PoolDinner.Domain.MenuAggregate.Entities
         {
             return new(MenuItemId.CreateUnique(), name, description);
         }
+        #pragma warning disable CS8618
+            private MenuItem()
+            {
+            }
+        #pragma warning restore CS8618
     }
 }

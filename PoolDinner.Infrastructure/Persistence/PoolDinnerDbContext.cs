@@ -12,6 +12,12 @@ namespace PoolDinner.Infrastructure.Persistence
 
         }
         public DbSet<Menu> Menus { get; set; } = null!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PoolDinnerDbContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
 

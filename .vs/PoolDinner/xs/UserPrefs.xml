@@ -1,6 +1,52 @@
 ﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupConfiguration="{24504AC3-338C-4FA1-BE60-732FF3E26F06}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PoolDinner.Domain/HostAggregate/ValueObjects/HostId.cs">
+    <Files>
+      <File FileName="PoolDinner.Api/Controllers/AuthenticationController.cs" />
+      <File FileName="PoolDinner.Infrastructure/DependencyInjection.cs" Line="29" Column="62" />
+      <File FileName="PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" />
+      <File FileName="PoolDinner.Infrastructure/Persistence/Configurations/MenuConfigurations.cs" />
+      <File FileName="PoolDinner.Domain/MenuAggregate/ValueObjects/MenuId.cs" />
+      <File FileName="PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommandHandler.cs" Line="36" Column="1" />
+      <File FileName="PoolDinner.Domain/MenuAggregate/Menu.cs" Line="71" Column="1" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/MenuAggregate/Entities/MenuSection.cs" Line="41" Column="9" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/DinnerAggregate/ValueObjects/DinnerId.cs" Line="5" Column="25" NotebookId="1" />
+      <File FileName="PoolDinner.Contracts/Menus/MenuResponse.cs" Line="25" Column="5" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/MenuAggregate/ValueObjects/MenuSectionId.cs" Line="7" Column="46" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/MenuReviewAggregate/ValueObjects/MenuReviewId.cs" Line="5" Column="25" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/MenuAggregate/Entities/MenuItem.cs" Line="23" Column="29" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/HostAggregate/ValueObjects/HostId.cs" Line="29" Column="2" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/Models/AggregateRoot.cs" Line="13" Column="9" NotebookId="1" />
+      <File FileName="PoolDinner.Domain/Models/Entity.cs" Line="42" Column="9" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PoolDinner" expanded="True">
+            <Node name="PoolDinner.Api">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="PoolDinner.Contracts">
+              <Node name="Menus" expanded="True" />
+            </Node>
+            <Node name="PoolDinner.Domain">
+              <Node name="HostAggregate" expanded="True">
+                <Node name="ValueObjects" expanded="True">
+                  <Node name="HostId.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="MenuReviewAggregate" expanded="True">
+                <Node name="ValueObjects" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PoolDinner.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="35" column="1" />
@@ -9,30 +55,4 @@
       <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="59" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.PoolDinner.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PoolDinner.Api/Controllers/AuthenticationController.cs">
-    <Files>
-      <File FileName="PoolDinner.Api/Controllers/AuthenticationController.cs" Line="63" Column="3" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="PoolDinner">
-            <Node name="PoolDinner.Api" selected="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="PoolDinner.Application" expanded="True">
-              <Node name="Menus" expanded="True">
-                <Node name="Commands" expanded="True">
-                  <Node name="CreateMenu" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="PoolDinner.Infrastructure" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
 </Properties>

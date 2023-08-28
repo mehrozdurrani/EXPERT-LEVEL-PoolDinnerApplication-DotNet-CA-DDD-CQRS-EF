@@ -4,7 +4,7 @@ namespace PoolDinner.Domain.MenuAggregate.ValueObjects
 {
     public sealed class MenuItemId : ValueObject
     {
-        public Guid Value { get; init; }
+        public Guid Value;
 
         private MenuItemId(Guid value)
         {

@@ -25,6 +25,9 @@ public static class DependencyInjection
     public static IServiceCollection AddPersistance(this IServiceCollection services)
     {
         services.AddDbContext<PoolDinnerDbContext>(options => options.UseSqlServer(/*Connection String*/));
+
+        services.AddScoped<DbContext, PoolDinnerDbContext>();
+
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         return services;
