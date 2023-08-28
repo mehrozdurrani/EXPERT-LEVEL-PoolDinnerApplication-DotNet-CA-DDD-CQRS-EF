@@ -11,10 +11,9 @@ namespace PoolDinner.Domain.HostAggregate.ValueObjects
             Value = value;
         }
 
-        public static HostId Create(string id)
+        public static HostId Create(Guid id)
         {
-            Guid.TryParse(id, out Guid guid);
-            return new HostId(guid);
+             return new HostId(id);
         }
 
         public static HostId CreateUnique()

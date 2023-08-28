@@ -11,11 +11,8 @@ namespace PoolDinner.Domain.MenuAggregate.Entities
 
         public string Description { get; init; }
 
-        public IReadOnlyList<MenuItem> Items()
-        {
-            return _items.AsReadOnly();
-        }
-
+        public IReadOnlyList<MenuItem> Items => _items.AsReadOnly();
+      
         private MenuSection(
             MenuSectionId id,
             string name,
