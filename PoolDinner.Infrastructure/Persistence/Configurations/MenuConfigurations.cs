@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PoolDinner.Domain.HostAggregate.ValueObjects;
 using PoolDinner.Domain.MenuAggregate;
+using PoolDinner.Domain.MenuAggregate.Entities;
 using PoolDinner.Domain.MenuAggregate.ValueObjects;
 
 namespace PoolDinner.Infrastructure.Persistence.Configurations
@@ -28,8 +29,8 @@ namespace PoolDinner.Infrastructure.Persistence.Configurations
                 mri.WithOwner().HasForeignKey("MenuId");
                 mri.HasKey("Id");
                 mri.Property(id => id.Value).
-                ValueGeneratedNever().
-                HasColumnName("DinnerId");
+                HasColumnName("ReviewId").
+                ValueGeneratedNever();
             });
             builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!.
                 SetPropertyAccessMode(PropertyAccessMode.Field);
@@ -43,8 +44,8 @@ namespace PoolDinner.Infrastructure.Persistence.Configurations
                 dib.WithOwner().HasForeignKey("MenuId");
                 dib.HasKey("Id");
                 dib.Property(id => id.Value).
-                ValueGeneratedNever().
-                HasColumnName("DinnerId");
+                HasColumnName("DinnerId").
+                ValueGeneratedNever();
             });
             builder.Metadata.FindNavigation(nameof(Menu.DinnerIds))!.
                 SetPropertyAccessMode(PropertyAccessMode.Field);
@@ -73,14 +74,13 @@ namespace PoolDinner.Infrastructure.Persistence.Configurations
                 {
                     ib.ToTable("MenuItems");
 
-                    ib.HasKey("MenuItemId", "MenuId", "MenuSectionId");
-
-                    ib.WithOwner().HasForeignKey("MenuId", "MenuSectionId");
+                    ib.WithOwner().HasForeignKey("MenuSectionId","MenuId");
+                    ib.HasKey(nameof(MenuItem.Id), "MenuId", "MenuSectionId");
 
                     ib.Property(i => i.Id).
-                    HasColumnName("MenuItemId").
                     ValueGeneratedNever().
-                    HasConversion(id => id.Value,
+                    HasConversion(
+                        id => id.Value,
                     value => MenuItemId.Create(value));
 
                     ib.Property(i => i.Name).HasMaxLength(100);
@@ -100,8 +100,10 @@ namespace PoolDinner.Infrastructure.Persistence.Configurations
 
             // Property Configuration of Strong ID
             builder.Property(m => m.Id).
-                ValueGeneratedNever()
-                .HasConversion(id => id.Value, value => MenuId.Create(value));
+                ValueGeneratedNever().
+                HasConversion(
+                id => id.Value,
+                value => MenuId.Create(value));
 
             builder.Property(m => m.Name).HasMaxLength(100);
             builder.Property(m => m.Description).HasMaxLength(200);

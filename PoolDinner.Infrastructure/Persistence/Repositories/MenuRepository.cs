@@ -9,7 +9,6 @@ namespace PoolDinner.Infrastructure.Persistence.Repositories
     {
         private readonly DbContext _dbContext;
 
-        private readonly List<Menu> _menus = new();
         public MenuRepository(DbContext dbContext)
         {
             _dbContext = dbContext;

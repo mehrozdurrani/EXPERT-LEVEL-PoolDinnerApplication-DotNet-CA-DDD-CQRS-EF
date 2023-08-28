@@ -34,5 +34,10 @@ namespace PoolDinner.Domain.MenuAggregate.Entities
                 description,
                 items);
         }
+        #pragma warning disable CS8618
+            private MenuSection()
+            {
+            }
+        #pragma warning restore CS8618
     }
 }

@@ -20,5 +20,10 @@ namespace PoolDinner.Domain.MenuReviewAggregate
         {
             yield return Value;
         }
+#pragma warning disable CS8618
+        private MenuReviewId()
+        {
+        }
+#pragma warning restore CS8618
     }
 }
