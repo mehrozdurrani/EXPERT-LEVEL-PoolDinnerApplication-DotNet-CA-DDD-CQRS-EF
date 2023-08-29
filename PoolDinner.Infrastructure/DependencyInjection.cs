@@ -18,16 +18,15 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, ConfigurationManager configuration)
     {
         services.AddAuth(configuration);
-        services.AddPersistance();
+        services.AddPersistance(configuration);
         return services;
     }
 
-    public static IServiceCollection AddPersistance(this IServiceCollection services)
+    public static IServiceCollection AddPersistance(this IServiceCollection services, ConfigurationManager configurationManager)
     {
-        services.AddDbContext<PoolDinnerDbContext>(options => options.UseSqlServer(/*Connection String*/));
-
+        string connectionString = configurationManager.GetConnectionString("PoolDinnerDbConnection")!;
+        services.AddDbContext<PoolDinnerDbContext>(options => options.UseSqlServer(connectionString));
         services.AddScoped<DbContext, PoolDinnerDbContext>();
-
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         return services;
@@ -37,9 +36,7 @@ public static class DependencyInjection
     {
         var jwtSettings = new JwtSettings();
         configuration.Bind(JwtSettings.SectionName,jwtSettings);
-
         services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
-
         services.AddSingleton(Options.Create(jwtSettings));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme).
