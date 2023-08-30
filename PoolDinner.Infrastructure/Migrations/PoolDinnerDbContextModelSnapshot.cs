@@ -53,7 +53,7 @@ namespace PoolDinner.Infrastructure.Migrations
 
             modelBuilder.Entity("PoolDinner.Domain.MenuAggregate.Menu", b =>
                 {
-                    b.OwnsOne("PoolDinner.Domain.Common.AverageRating", "AverageRating", b1 =>
+                    b.OwnsOne("PoolDinner.Domain.MenuAggregate.Menu.AverageRating#PoolDinner.Domain.Common.AverageRating", "AverageRating", b1 =>
                         {
                             b1.Property<Guid>("MenuId")
                                 .HasColumnType("uniqueidentifier");
@@ -66,13 +66,13 @@ namespace PoolDinner.Infrastructure.Migrations
 
                             b1.HasKey("MenuId");
 
-                            b1.ToTable("Menu");
+                            b1.ToTable("Menu", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("MenuId");
                         });
 
-                    b.OwnsMany("PoolDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "DinnerIds", b1 =>
+                    b.OwnsMany("PoolDinner.Domain.MenuAggregate.Menu.DinnerIds#PoolDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "DinnerIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .ValueGeneratedOnAdd()
@@ -97,7 +97,32 @@ namespace PoolDinner.Infrastructure.Migrations
                                 .HasForeignKey("MenuId");
                         });
 
-                    b.OwnsMany("PoolDinner.Domain.MenuAggregate.Entities.MenuSection", "Sections", b1 =>
+                    b.OwnsMany("PoolDinner.Domain.MenuAggregate.Menu.MenuReviewIds#PoolDinner.Domain.MenuReviewAggregate.MenuReviewId", "MenuReviewIds", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
+
+                            b1.Property<Guid>("MenuId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<Guid>("Value")
+                                .HasColumnType("uniqueidentifier")
+                                .HasColumnName("ReviewId");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("MenuId");
+
+                            b1.ToTable("MenuMenuReviewIds", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("MenuId");
+                        });
+
+                    b.OwnsMany("PoolDinner.Domain.MenuAggregate.Menu.Sections#PoolDinner.Domain.MenuAggregate.Entities.MenuSection", "Sections", b1 =>
                         {
                             b1.Property<Guid>("Id")
                                 .HasColumnType("uniqueidentifier")
@@ -125,7 +150,7 @@ namespace PoolDinner.Infrastructure.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("MenuId");
 
-                            b1.OwnsMany("PoolDinner.Domain.MenuAggregate.Entities.MenuItem", "Items", b2 =>
+                            b1.OwnsMany("PoolDinner.Domain.MenuAggregate.Menu.Sections#PoolDinner.Domain.MenuAggregate.Entities.MenuSection.Items#PoolDinner.Domain.MenuAggregate.Entities.MenuItem", "Items", b2 =>
                                 {
                                     b2.Property<Guid>("Id")
                                         .HasColumnType("uniqueidentifier");
@@ -157,31 +182,6 @@ namespace PoolDinner.Infrastructure.Migrations
                                 });
 
                             b1.Navigation("Items");
-                        });
-
-                    b.OwnsMany("PoolDinner.Domain.MenuReviewAggregate.MenuReviewId", "MenuReviewIds", b1 =>
-                        {
-                            b1.Property<int>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("int");
-
-                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
-
-                            b1.Property<Guid>("MenuId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<Guid>("Value")
-                                .HasColumnType("uniqueidentifier")
-                                .HasColumnName("ReviewId");
-
-                            b1.HasKey("Id");
-
-                            b1.HasIndex("MenuId");
-
-                            b1.ToTable("MenuMenuReviewIds", (string)null);
-
-                            b1.WithOwner()
-                                .HasForeignKey("MenuId");
                         });
 
                     b.Navigation("AverageRating")
