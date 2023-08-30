@@ -15,14 +15,14 @@ namespace PoolDinner.Api.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public MenusController(IMediator mediator, IMapper mapper )
+        public MenusController(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
             _mapper = mapper;
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreateMenu(CreateMenuRequest request, string hostId)
+        public async Task<ActionResult> CreateMenu(CreateMenuRequest request, Guid hostId)
         {
             var command = _mapper.Map<CreateMenuCommand>((request, hostId));
             var createMenuResult = await _mediator.Send(command);

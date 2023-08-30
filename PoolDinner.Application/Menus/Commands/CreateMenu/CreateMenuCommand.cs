@@ -4,7 +4,7 @@ using MediatR;
 namespace PoolDinner.Application.Menus.Commands.CreateMenu
 {
     public record CreateMenuCommand(
-        string HostId,
+        Guid HostId,
         string Name,
         string Description,
         List<MenuSectionCommand> Sections): IRequest<Menu>;

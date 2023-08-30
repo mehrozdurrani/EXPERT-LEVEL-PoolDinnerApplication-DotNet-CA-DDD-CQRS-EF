@@ -96,7 +96,6 @@ namespace PoolDinner.Infrastructure.Persistence.Configurations
                 HasConversion(
                 id => id.Value,
                 value => MenuId.Create(value));
-
             builder.Property(m => m.Name).HasMaxLength(100);
             builder.Property(m => m.Description).HasMaxLength(200);
             builder.OwnsOne(m => m.AverageRating);
