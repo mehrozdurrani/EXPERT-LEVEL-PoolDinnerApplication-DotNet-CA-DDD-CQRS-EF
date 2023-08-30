@@ -8,7 +8,7 @@ using PoolDinner.Domain.MenuAggregate.Entities;
 
 namespace PoolDinner.Domain.MenuAggregate
 {
-    public class Menu : AggregateRoot<MenuId>
+    public class Menu : AggregateRoot<MenuId, Guid>
     {
         private readonly List<MenuSection> _sections = new();
 

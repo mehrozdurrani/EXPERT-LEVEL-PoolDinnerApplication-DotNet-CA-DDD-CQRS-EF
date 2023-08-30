@@ -1,5 +1,14 @@
-﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupConfiguration="{24504AC3-338C-4FA1-BE60-732FF3E26F06}|https">
-  <MonoDevelop.Ide.ItemProperties.PoolDinner.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+﻿<Properties StartupConfiguration="{24504AC3-338C-4FA1-BE60-732FF3E26F06}|https" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.ItemProperties.Src.PoolDinner.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="35" column="1" />
+    <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/DinnersController.cs" relfile="BuberDinner.Api/Controllers/DinnersController.cs" line="11" column="1" />
+    <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/MenusController.cs" relfile="BuberDinner.Api/Controllers/MenusController.cs" line="16" column="1" />
+    <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="59" column="1" />
+    <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" relfile="PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" line="18" column="1" />
+    <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/PoolDinner.Api/Controllers/AuthenticationController.cs" relfile="PoolDinner.Api/Controllers/AuthenticationController.cs" line="59" column="1" />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="PoolDinner.Domain/Common/AverageRating.cs">
     <Files>
       <File FileName="PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommandHandler.cs" Line="35" Column="31" />
@@ -63,17 +72,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="35" column="1" />
-      <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/DinnersController.cs" relfile="BuberDinner.Api/Controllers/DinnersController.cs" line="11" column="1" />
-      <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/MenusController.cs" relfile="BuberDinner.Api/Controllers/MenusController.cs" line="16" column="1" />
-      <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="59" column="1" />
-      <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" relfile="PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" line="18" column="1" />
-      <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/PoolDinner.Api/Controllers/AuthenticationController.cs" relfile="PoolDinner.Api/Controllers/AuthenticationController.cs" line="59" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

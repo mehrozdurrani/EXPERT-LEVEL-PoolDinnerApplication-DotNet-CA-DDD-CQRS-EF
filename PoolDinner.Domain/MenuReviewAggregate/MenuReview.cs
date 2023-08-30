@@ -6,7 +6,7 @@ using PoolDinner.Domain.Models;
 
 namespace PoolDinner.Domain.MenuReviewAggregate
 {
-    public sealed class MenuReview : AggregateRoot<MenuReviewId>
+    public sealed class MenuReview : AggregateRoot<MenuReviewId, Guid>
     {
         public float Rating;
 

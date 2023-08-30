@@ -2,9 +2,9 @@
 
 namespace PoolDinner.Domain.MenuReviewAggregate
 {
-    public sealed class MenuReviewId : ValueObject
+    public sealed class MenuReviewId : AggregateRootId<Guid>
     {
-        public Guid Value;
+        public override Guid Value { get; protected set; }
 
         private MenuReviewId(Guid _value)
         {
