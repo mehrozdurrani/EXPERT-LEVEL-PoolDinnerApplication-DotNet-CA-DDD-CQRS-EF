@@ -41,7 +41,6 @@ namespace PoolDinner.Application.Common.Behaviour
 
 
 
-
 //namespace BuberDinner.Application.Common.Behaviour
 //{
 //    public class ValidateRegisterCommandBehaviour : IPipelineBehavior<RegisterCommand, AuthenticationResult>

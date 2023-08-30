@@ -36,6 +36,7 @@ namespace PoolDinner.Domain.MenuAggregate
             HostId hostId,
             string name,
             string description,
+            AverageRating averageRating,
             List<MenuSection> sections,
             DateTime createdDateTime,
             DateTime updatedDateTime) : base(id)
@@ -43,6 +44,7 @@ namespace PoolDinner.Domain.MenuAggregate
             HostId = hostId;
             Name = name;
             Description = description;
+            AverageRating = averageRating;
             _sections = sections;
             CreatedDateTime = createdDateTime;
             UpdatedDateTime = updatedDateTime;
@@ -57,6 +59,7 @@ namespace PoolDinner.Domain.MenuAggregate
                 hostId,
                 name,
                 description,
+                AverageRating.CreateNew(),
                 sections,
                 DateTime.UtcNow,
                 DateTime.UtcNow);

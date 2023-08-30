@@ -21,7 +21,7 @@ namespace PoolDinner.Application.Menus.Commands.CreateMenu
 
             // Create Menu
             var menu = Menu.Create(
-                HostId.Create(Guid.Parse(request.HostId)),
+                HostId.Create(request.HostId),
                 request.Name,
                 request.Description,
                 request.Sections.Select(

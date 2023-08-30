@@ -7,12 +7,12 @@ namespace PoolDinner.Infrastructure.Persistence
 {
     public class PoolDinnerDbContext : DbContext
     {
+        public DbSet<Menu> Menus { get; set; } = null!;
+
         public PoolDinnerDbContext(DbContextOptions <PoolDinnerDbContext> options): base(options)
         {
 
         }
-        public DbSet<Menu> Menus { get; set; } = null!;
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PoolDinnerDbContext).Assembly);
