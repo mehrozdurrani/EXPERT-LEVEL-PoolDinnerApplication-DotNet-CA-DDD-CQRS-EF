@@ -1,4 +1,7 @@
-﻿<Properties StartupConfiguration="{27F460CA-FE4D-4C28-B62A-9F761951451F}|https" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupConfiguration="{60B52D49-8A6C-43A6-83E7-1F1582EA4466}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/BuberDinner.Api/Controllers/AuthenticationController.cs" relfile="BuberDinner.Api/Controllers/AuthenticationController.cs" line="35" column="1" />
@@ -8,23 +11,41 @@
       <Breakpoint file="/Users/mehrozdurrani/Desktop/Learning/Clean Architecture DotNet C#/PoolDinner/PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" relfile="PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" line="18" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="tests/UnitTests/PoolDinner.Application.UnitTests/TestUtils/Menu/Extensions/Menu.Extensions.Validations.cs">
     <Files>
-      <File FileName="src/PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommandHandler.cs" Line="32" Column="103" />
-      <File FileName="src/PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommand.cs" Line="6" Column="19" />
-      <File FileName=".vs/PoolDinner/xs/project-cache/PoolDinner.Api-Debug.json" Line="1" Column="1" />
-      <File FileName=".vs/PoolDinner/xs/project-cache/PoolDinner.Application-Debug.json" Line="1" Column="1" />
+      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/TestUtils/Menu/Extensions/Menu.Extensions.Validations.cs" Line="13" Column="2" />
+      <File FileName="src/PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommand.cs" Line="1" Column="1" />
+      <File FileName="src/PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommandHandler.cs" Line="3" Column="1" />
+      <File FileName="src/PoolDinner.Domain/MenuAggregate/Menu.cs" Line="11" Column="42" />
+      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/Menu/Commands/CreateMenu/CreateMenuCommandHandlerTest.cs" Line="41" Column="48" />
+      <File FileName="src/PoolDinner.Domain/Models/AggregateRoot.cs" Line="3" Column="27" />
+      <File FileName="src/PoolDinner.Domain/Models/AggregateRootId.cs" Line="3" Column="27" />
+      <File FileName="src/PoolDinner.Domain/Models/Entity.cs" Line="1" Column="1" />
+      <File FileName="src/PoolDinner.Domain/HostAggregate/Host.cs" Line="21" Column="1" />
+      <File FileName="src/PoolDinner.Domain/MenuAggregate/ValueObjects/MenuId.cs" Line="22" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PoolDinner" selected="True">
+          <Node name="PoolDinner" expanded="True" selected="True">
             <Node name="src" expanded="True">
-              <Node name="PoolDinner.Application">
-                <Node name="Menus" expanded="True">
-                  <Node name="Commands" expanded="True">
-                    <Node name="CreateMenu" expanded="True" />
+              <Node name="PoolDinner.Domain">
+                <Node name="HostAggregate" expanded="True" />
+                <Node name="MenuAggregate" expanded="True">
+                  <Node name="ValueObjects" expanded="True" />
+                </Node>
+                <Node name="Models" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="tests" expanded="True">
+              <Node name="UnitTests" expanded="True">
+                <Node name="PoolDinner.Application.UnitTests">
+                  <Node name="Menus" expanded="True" />
+                  <Node name="TestUtils" expanded="True">
+                    <Node name="Constants" expanded="True" />
+                    <Node name="Menu" expanded="True">
+                      <Node name="Extensions" expanded="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>
@@ -32,14 +53,7 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>menu</Value>
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.src.PoolDinner.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
