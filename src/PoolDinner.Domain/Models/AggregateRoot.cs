@@ -1,7 +1,7 @@
 ﻿namespace PoolDinner.Domain.Models
 {
     public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
-        where TId: AggregateRootId<TIdType>
+        where TId : AggregateRootId<TIdType>
     {
         public new AggregateRootId<TIdType> Id { get; protected set; }
 

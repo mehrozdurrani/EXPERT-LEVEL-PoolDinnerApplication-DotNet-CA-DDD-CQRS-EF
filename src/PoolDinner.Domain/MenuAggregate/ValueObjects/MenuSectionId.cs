@@ -20,7 +20,7 @@ namespace PoolDinner.Domain.MenuAggregate.ValueObjects
         {
             return new(Guid.NewGuid());
         }
-           
+
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;

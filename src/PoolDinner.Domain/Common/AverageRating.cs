@@ -2,7 +2,7 @@
 
 namespace PoolDinner.Domain.Common
 {
-    public sealed class AverageRating : ValueObject 
+    public sealed class AverageRating : ValueObject
     {
         public double Value { get; private set; }
         public int NumRatings { get; private set; }
@@ -13,7 +13,7 @@ namespace PoolDinner.Domain.Common
             NumRatings = numRatings;
         }
 
-        public static AverageRating CreateNew(double rating =0, int numRatings =0)
+        public static AverageRating CreateNew(double rating = 0, int numRatings = 0)
         {
             return new(rating, numRatings);
         }

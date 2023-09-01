@@ -1,5 +1,4 @@
-﻿using System;
-using PoolDinner.Domain.BillAggregate.ValueObjects;
+﻿using PoolDinner.Domain.BillAggregate.ValueObjects;
 using PoolDinner.Domain.DinnerAggregate.ValueObjects;
 using PoolDinner.Domain.GuestAggregate.ValueObjects;
 using PoolDinner.Domain.Models;

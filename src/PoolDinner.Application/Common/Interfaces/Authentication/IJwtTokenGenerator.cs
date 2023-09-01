@@ -1,5 +1,4 @@
-﻿using System;
-namespace PoolDinner.Application.Common.Interfaces.Authentication
+﻿namespace PoolDinner.Application.Common.Interfaces.Authentication
 {
     public interface IJwtTokenGenerator
     {

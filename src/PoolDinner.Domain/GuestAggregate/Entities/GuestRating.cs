@@ -5,7 +5,7 @@ using PoolDinner.Domain.Models;
 
 namespace PoolDinner.Domain.GuestAggregate.Entities
 {
-    public sealed class GuestRating : Entity<GuestRatingId> 
+    public sealed class GuestRating : Entity<GuestRatingId>
     {
         public HostId HostId { get; init; }
         public DinnerId DinnerId { get; init; }

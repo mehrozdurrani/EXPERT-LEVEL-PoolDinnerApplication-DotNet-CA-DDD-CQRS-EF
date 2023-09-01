@@ -6,7 +6,7 @@ namespace PoolDinner.Api.Mapping
 {
     public static class DependencyInjection
     {
-       public static IServiceCollection AddMappings(this IServiceCollection services)
+        public static IServiceCollection AddMappings(this IServiceCollection services)
         {
             // Scaning all the Assembly for IRegister components
             var config = TypeAdapterConfig.GlobalSettings;

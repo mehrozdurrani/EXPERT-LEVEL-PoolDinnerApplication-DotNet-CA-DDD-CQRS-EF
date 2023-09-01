@@ -18,8 +18,8 @@ namespace PoolDinner.Api.Mapping
             // Configuration for difference in Source and Destination object
             config.NewConfig<AuthenticationResult, AuthenticationResponse>().
                 Map(desc => desc.Token, src => src.Token).
-                Map(desc => desc.Id, src => src.user.Id.Value).
-                Map(desc => desc, src => src.user);
+                Map(desc => desc.Id, src => src.User.Id.Value).
+                Map(desc => desc, src => src.User);
         }
     }
 }

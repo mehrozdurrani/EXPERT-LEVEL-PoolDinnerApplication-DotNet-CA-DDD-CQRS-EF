@@ -9,7 +9,7 @@ namespace PoolDinner.Infrastructure.Persistence
     {
         public DbSet<Menu> Menus { get; set; } = null!;
 
-        public PoolDinnerDbContext(DbContextOptions <PoolDinnerDbContext> options): base(options)
+        public PoolDinnerDbContext(DbContextOptions<PoolDinnerDbContext> options) : base(options)
         {
 
         }

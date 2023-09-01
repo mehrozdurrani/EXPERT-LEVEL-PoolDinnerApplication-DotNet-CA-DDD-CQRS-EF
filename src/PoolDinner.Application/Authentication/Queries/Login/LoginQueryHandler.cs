@@ -7,7 +7,7 @@ using MediatR;
 
 namespace PoolDinner.Application.Authentication.Queries
 {
-    public class LoginQueryHandler : IRequestHandler<LoginQuery,AuthenticationResult>
+    public class LoginQueryHandler : IRequestHandler<LoginQuery, AuthenticationResult>
     {
 
         private readonly IJwtTokenGenerator _jwtTokenGenerator;

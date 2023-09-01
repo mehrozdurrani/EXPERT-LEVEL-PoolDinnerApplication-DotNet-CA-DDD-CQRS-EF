@@ -3,7 +3,6 @@ using PoolDinner.Api.Controllers;
 using PoolDinner.Application.Authentication.Commands.Register;
 using PoolDinner.Application.Authentication.Queries;
 using PoolDinner.Application.Services.Authentication;
-
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;

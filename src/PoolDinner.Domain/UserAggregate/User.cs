@@ -14,7 +14,7 @@ namespace PoolDinner.Domain.UserAggregate
             string firstName,
             string lastName,
             string email,
-            string password):base(userId)
+            string password) : base(userId)
         {
             FirstName = firstName;
             LastName = lastName;

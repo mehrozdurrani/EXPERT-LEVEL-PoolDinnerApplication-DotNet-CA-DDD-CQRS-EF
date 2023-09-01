@@ -13,7 +13,7 @@ namespace PoolDinner.Domain.MenuReviewAggregate
 
         public static MenuReviewId CreateUnique()
         {
-            return (new(Guid.NewGuid()));
+            return new(Guid.NewGuid());
         }
 
         protected override IEnumerable<object> GetEqualityComponents()

@@ -7,7 +7,7 @@ using PoolDinner.Domain.UserAggregate.ValueObjects;
 
 namespace PoolDinner.Domain.GuestAggregate
 {
-    public sealed class Guest :Entity<GuestId>
+    public sealed class Guest : Entity<GuestId>
     {
         public string FirstName { get; init; }
 
@@ -27,27 +27,16 @@ namespace PoolDinner.Domain.GuestAggregate
 
         private readonly List<MenuReviewId> _menuReviewIds = new();
 
-        IReadOnlyList<DinnerId> UpcomingDinnerIds()
-        {
-            return _upcomingDinnerIds.AsReadOnly();
-        }
+        public IReadOnlyList<DinnerId> UpcomingDinnerIds => _upcomingDinnerIds.AsReadOnly();
+        
+        public IReadOnlyList<DinnerId> PastDinnerIds => _pastDinnerIds.AsReadOnly();
 
-        IReadOnlyList<DinnerId> PastDinnerIds()
-        {
-            return _pastDinnerIds.AsReadOnly();
-        }
+        public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
 
-        IReadOnlyList<BillId> BillIds()
-        {
-            return _billIds.AsReadOnly();
-        }
-
-        IReadOnlyList<MenuReviewId> MenuReviewIds()
-        {
-            return _menuReviewIds.AsReadOnly();
-        }
-
+        public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
+    
         public DateTime CreatedDateTime;
+
         public DateTime UpdatedDateTime;
 
         private Guest(GuestId id,
@@ -57,7 +46,7 @@ namespace PoolDinner.Domain.GuestAggregate
             double rating,
             UserId userId,
             DateTime createdDateTime,
-            DateTime updatedDateTime) : base (id)
+            DateTime updatedDateTime) : base(id)
         {
             FirstName = firstName;
             LastName = lastName;
