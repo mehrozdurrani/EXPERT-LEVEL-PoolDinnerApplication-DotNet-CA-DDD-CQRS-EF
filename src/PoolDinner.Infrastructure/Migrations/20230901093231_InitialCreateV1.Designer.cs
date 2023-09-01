@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoolDinner.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using PoolDinner.Infrastructure.Persistence;
 namespace PoolDinner.Infrastructure.Migrations
 {
     [DbContext(typeof(PoolDinnerDbContext))]
-    partial class PoolDinnerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230901093231_InitialCreateV1")]
+    partial class InitialCreateV1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
