@@ -68,7 +68,7 @@ namespace PoolDinner.Infrastructure.Persistence.Configurations
                 sb.OwnsMany(s => s.Items, ib =>
                 {
                     ib.ToTable("MenuItems");
-                    ib.WithOwner().HasForeignKey("MenuSectionId","MenuId");
+                    ib.WithOwner().HasForeignKey("MenuSectionId", "MenuId");
                     ib.HasKey(nameof(MenuItem.Id), "MenuId", "MenuSectionId");
                     ib.Property(i => i.Id).
                     ValueGeneratedNever().

@@ -10,7 +10,7 @@
         string Description,
         List<MenuItemsRequest> Items);
 
-    public record MenuItemsRequest (
+    public record MenuItemsRequest(
         string Name,
         string Description);
 }

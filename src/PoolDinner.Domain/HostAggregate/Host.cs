@@ -7,7 +7,7 @@ using PoolDinner.Domain.UserAggregate.ValueObjects;
 
 namespace PoolDinner.Domain.HostAggregate
 {
-    public sealed class Host: Entity<HostId>
+    public sealed class Host : Entity<HostId>
     {
         private readonly List<MenuId> _menuIds = new();
 
@@ -27,22 +27,16 @@ namespace PoolDinner.Domain.HostAggregate
 
         public DateTime UpdatedDateTime;
 
-        public IReadOnlyList<MenuId> MenuIds()
-        {
-            return _menuIds.AsReadOnly();
-        }
-
-        public IReadOnlyList<DinnerId> DinnerIds()
-        {
-            return _dinnerIds.AsReadOnly();
-        }
-
+        public IReadOnlyList<MenuId> MenuIds => _menuIds.AsReadOnly();
+        
+        public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+     
         public Host(HostId hostId,
             string firstName,
             string lastName,
             string profileImage,
             AverageRating averageRating,
-            UserId userId): base(hostId)
+            UserId userId) : base(hostId)
         {
             FirstName = firstName;
             LastName = lastName;

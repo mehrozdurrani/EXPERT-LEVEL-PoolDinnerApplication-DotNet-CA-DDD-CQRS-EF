@@ -39,10 +39,7 @@ namespace PoolDinner.Domain.DinnerAggregate
 
         private readonly List<Reservation> _reservations = new();
 
-        public IReadOnlyList<Reservation> Reservations ()
-        {
-            return _reservations.AsReadOnly();
-        }
+        public IReadOnlyList<Reservation> Reservations() => _reservations.AsReadOnly();
 
         public DateTime CreatedDateTime { get; init; }
 
@@ -70,6 +67,8 @@ namespace PoolDinner.Domain.DinnerAggregate
             Description = description;
             StartDateTime = startDateTime;
             EndDateTime = endDateTime;
+            StartedDateTime = startDateTime;
+            EndedDateTime = endDateTime;
             Status = status;
             IsPublic = isPublic;
             MaxGuests = maxGuests;

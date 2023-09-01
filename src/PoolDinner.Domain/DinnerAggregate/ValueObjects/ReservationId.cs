@@ -1,5 +1,4 @@
-﻿using System;
-using PoolDinner.Domain.Models;
+﻿using PoolDinner.Domain.Models;
 
 namespace PoolDinner.Domain.DinnerAggregate.ValueObjects
 {

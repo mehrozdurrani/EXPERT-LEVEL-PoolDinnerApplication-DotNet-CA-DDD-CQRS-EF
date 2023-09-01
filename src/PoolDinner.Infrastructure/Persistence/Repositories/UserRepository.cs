@@ -5,7 +5,7 @@ namespace PoolDinner.Infrastructure.Persistence.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly static List<User> _users = new List<User>();
+        private readonly static List<User> _users = new();
 
         void IUserRepository.Add(User user)
         {

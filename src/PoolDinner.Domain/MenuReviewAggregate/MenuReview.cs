@@ -12,7 +12,7 @@ namespace PoolDinner.Domain.MenuReviewAggregate
 
         public string Comment;
 
-        public HostId HostId{ get; init; }
+        public HostId HostId { get; init; }
 
         public MenuId MenuId { get; init; }
 
@@ -50,7 +50,7 @@ namespace PoolDinner.Domain.MenuReviewAggregate
             GuestRatingId guestId,
             DinnerId dinnerId)
         {
-            return new (MenuReviewId.CreateUnique(),
+            return new(MenuReviewId.CreateUnique(),
                 rating,
                 comment,
                 hostId,

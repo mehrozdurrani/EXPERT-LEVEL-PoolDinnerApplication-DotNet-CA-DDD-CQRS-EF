@@ -4,7 +4,7 @@
         string Id,
         string Name,
         string Description,
-        string HostId,     
+        string HostId,
         float AverageRating,
         List<MenuSectionResponse> Sections,
         DateTime CreatedDateTime,
@@ -12,13 +12,13 @@
         List<string> DinnerIds,
         List<string> MenuReviewIds);
     
-    public record MenuSectionResponse (
+    public record MenuSectionResponse(
         string Id,
         string Name,
         string Description,
-        List <MenuItemResponse> Items);
+        List<MenuItemResponse> Items);
 
-    public record MenuItemResponse (
+    public record MenuItemResponse(
         string Id,
         string Name,
         string Description);

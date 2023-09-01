@@ -7,7 +7,7 @@ using System.Text;
 
 namespace PoolDinner.Infrastructure.Authentication
 {
-    public class JwtTokenGenerator: IJwtTokenGenerator
+    public class JwtTokenGenerator : IJwtTokenGenerator
     {
         private readonly JwtSettings _jwtSettings;
         public JwtTokenGenerator(IOptions<JwtSettings> jwtOptions)
@@ -32,8 +32,8 @@ namespace PoolDinner.Infrastructure.Authentication
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
                 claims: claims,
-                expires:DateTime.Now.AddMinutes(_jwtSettings.ExpiryMinutes),
-                signingCredentials:signingCredentials);
+                expires: DateTime.Now.AddMinutes(_jwtSettings.ExpiryMinutes),
+                signingCredentials: signingCredentials);
 
             return new JwtSecurityTokenHandler().WriteToken(newSecurityToken);
         }

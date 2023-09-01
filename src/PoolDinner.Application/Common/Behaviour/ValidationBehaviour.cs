@@ -4,10 +4,10 @@ using MediatR;
 
 namespace PoolDinner.Application.Common.Behaviour
 {
-    public class ValidationBehaviour <TRequest, TResponse> :
+    public class ValidationBehaviour<TRequest, TResponse> :
         IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
-        where TResponse : class 
+        where TResponse : class
     {
         private readonly IValidator<TRequest>? _validator;
 
@@ -17,7 +17,7 @@ namespace PoolDinner.Application.Common.Behaviour
         }
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
-            if(_validator ==null)
+            if (_validator == null)
             {
                 return await next();
             }

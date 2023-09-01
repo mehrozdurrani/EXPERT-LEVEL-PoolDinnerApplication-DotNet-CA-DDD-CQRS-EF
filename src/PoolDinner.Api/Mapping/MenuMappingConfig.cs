@@ -2,12 +2,11 @@
 using PoolDinner.Contracts.Menus;
 using PoolDinner.Domain.MenuAggregate;
 using PoolDinner.Domain.MenuAggregate.Entities;
-
 using Mapster;
 
 namespace PoolDinner.Api.Mapping
 {
-    public class MenuMappingConfig : IRegister 
+    public class MenuMappingConfig : IRegister
     {
         public void Register(TypeAdapterConfig config)
         {
@@ -21,14 +20,15 @@ namespace PoolDinner.Api.Mapping
                 Map(dest => dest.HostId, src => src.HostId.Value).
                 Map(dest => dest.DinnerIds, src => src.DinnerIds.Select(dinnerId => dinnerId.Value)).
                 Map(dest => dest.MenuReviewIds, src => src.MenuReviewIds.Select(menuReviewId => menuReviewId.Value)).
-                Map(dest=>dest.Sections, src=>src.Sections);
+                Map(dest => dest.Sections, src => src.Sections);
 
             config.NewConfig<MenuSection, MenuSectionResponse>().
                 Map(dest => dest.Id, src => src.Id.Value).
-                Map(dest =>dest.Items , src=>src.Items);
+                Map(dest => dest.Items, src => src.Items);
 
             config.NewConfig<MenuItem, MenuItemResponse>().
-                Map(dest => dest.Id, src => src.Id.Value);
+                Map(dest => dest.Id,
+                    src => src.Id.Value);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿ using PoolDinner.Application.Services.Authentication;
+﻿using PoolDinner.Application.Services.Authentication;
 using MediatR;
 
 namespace PoolDinner.Application.Authentication.Commands.Register

@@ -35,7 +35,7 @@ namespace PoolDinner.Application.Menus.Commands.CreateMenu
             _menuRepository.Add(menu);
 
             // Return Menu
-            return menu; 
+            return menu;
         }
     }
 }

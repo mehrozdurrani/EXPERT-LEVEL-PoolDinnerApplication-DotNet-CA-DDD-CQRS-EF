@@ -1,6 +1,6 @@
 ﻿namespace PoolDinner.Domain.Models
 {
-    public abstract class Entity<TId>  : IEquatable<Entity<TId>>
+    public abstract class Entity<TId> : IEquatable<Entity<TId>>
         where TId : notnull
     {
         public TId Id { get; protected set; }
@@ -28,17 +28,17 @@
         public static bool operator !=(Entity<TId> left, Entity<TId> right)
         {
             // Returns true when not equal.
-            return !Equals(left, right); 
+            return !Equals(left, right);
         }
 
         public override int GetHashCode()
         {
             return Id.GetHashCode();
         }
-        #pragma warning disable CS8618
-            protected Entity()
-            {
-            }
-        #pragma warning restore CS8618
+#pragma warning disable CS8618
+        protected Entity()
+        {
+        }
+#pragma warning restore CS8618
     }
 }
