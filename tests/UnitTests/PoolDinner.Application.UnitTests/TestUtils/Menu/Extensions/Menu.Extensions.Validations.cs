@@ -20,9 +20,9 @@ namespace PoolDinner.Application.UnitTests.TestUtils.Menus.Extensions
             menuSection.Name.Should().Be(createMenuSectionCommand.Name);
             menuSection.Description.Should().Be(createMenuSectionCommand.Description);
             menuSection.Items.Should().HaveSameCount(createMenuSectionCommand.Items);
-            menuSection.Items.Zip(createMenuSectionCommand.Items).ToList().ForEach(pair=> ValidateItems(pair.First, pair.Second));
+            menuSection.Items.Zip(createMenuSectionCommand.Items).ToList().ForEach(pair => ValidateItems(pair.First, pair.Second));
         }
-        private static void ValidateItems (MenuItem menuItem, CreateMenuItemsCommand createMenuItemsCommand)
+        private static void ValidateItems(MenuItem menuItem, CreateMenuItemsCommand createMenuItemsCommand)
         {
             menuItem.Id.Should().NotBeNull();
             menuItem.Name.Should().Be(createMenuItemsCommand.Name);
