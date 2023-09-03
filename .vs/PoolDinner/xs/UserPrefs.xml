@@ -2,44 +2,49 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.src.PoolDinner.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="tests/UnitTests/PoolDinner.Api.UnitTests/obj/Debug/net7.0/PoolDinner.Api.UnitTests.GlobalUsings.g.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/PoolDinner.Api/Mapping/MenuMappingConfig.cs">
     <Files>
-      <File FileName="src/PoolDinner.Domain/Models/Entity.cs" Line="40" Column="10" />
-      <File FileName="src/PoolDinner.Domain/Models/ValueObject.cs" Line="43" Column="1" />
-      <File FileName="src/PoolDinner.Domain/UserAggregate/User.cs" Line="17" Column="30" />
-      <File FileName="src/PoolDinner.Domain/DinnerAggregate/Dinner.cs" Line="57" Column="22" />
-      <File FileName="src/PoolDinner.Domain/GuestAggregate/Guest.cs" Line="45" Column="36" />
-      <File FileName="src/PoolDinner.Domain/DinnerAggregate/Entities/Reservation.cs" Line="1" Column="1" />
-      <File FileName="src/PoolDinner.Domain/DinnerAggregate/ValueObjects/Location.cs" Line="1" Column="1" />
-      <File FileName="src/PoolDinner.Domain/DinnerAggregate/ValueObjects/ReservationId.cs" Line="1" Column="1" />
-      <File FileName="src/PoolDinner.Domain/obj/Debug/net7.0/PoolDinner.Domain.GlobalUsings.g.cs" Line="6" Column="1" />
-      <File FileName="src/PoolDinner.Domain/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" Line="2" Column="1" />
-      <File FileName="src/PoolDinner.Domain/MenuReviewAggregate/ValueObjects/MenuReviewId.cs" Line="16" Column="20" />
-      <File FileName="src/PoolDinner.Infrastructure/Authentication/JwtSettings.cs" Line="11" Column="2" />
-      <File FileName="src/PoolDinner.Infrastructure/Authentication/JwtTokenGenerator.cs" Line="20" Column="13" />
-      <File FileName="src/PoolDinner.Infrastructure/DependencyInjection.cs" Line="15" Column="2" />
-      <File FileName="src/PoolDinner.Infrastructure/Migrations/20230828110532_InitialCreate.cs" Line="1" Column="1" />
-      <File FileName="src/PoolDinner.Infrastructure/Persistence/Configurations/MenuConfigurations.cs" Line="30" Column="17" />
-      <File FileName="src/PoolDinner.Infrastructure/Persistence/PoolDinnerDbContext.cs" Line="18" Column="13" />
-      <File FileName="src/PoolDinner.Infrastructure/Persistence/Repositories/UserRepository.cs" Line="20" Column="2" />
-      <File FileName="src/PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" Line="19" Column="13" />
-      <File FileName="src/PoolDinner.Infrastructure/Migrations/20230828110532_InitialCreate.Designer.cs" Line="7" Column="1" />
-      <File FileName="src/PoolDinner.Infrastructure/obj/Debug/net7.0/PoolDinner.Infrastructure.GlobalUsings.g.cs" Line="6" Column="1" />
-      <File FileName="src/PoolDinner.Infrastructure/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" Line="2" Column="1" />
-      <File FileName="tests/UnitTests/PoolDinner.Api.UnitTests/obj/Debug/net7.0/PoolDinner.Api.UnitTests.GlobalUsings.g.cs" Line="2" Column="1" />
-      <File FileName="tests/UnitTests/PoolDinner.Api.UnitTests/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" Line="2" Column="1" />
-      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/Menus/Commands/CreateMenu/CreateMenuCommandHandlerTest.cs" Line="57" Column="2" />
-      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/TestUtils/Constants/Constants.Host.cs" Line="11" Column="10" />
-      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/TestUtils/Menu/Extensions/Menu.Extensions.Validations.cs" Line="13" Column="13" />
-      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/Menus/Commands/TestUtils/CreateMenuCommandUtils.cs" Line="27" Column="9" />
-      <File FileName="../../../../.nuget/packages/microsoft.net.test.sdk/17.5.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs" Line="2" Column="1" />
-      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/obj/Debug/net7.0/PoolDinner.Application.UnitTests.GlobalUsings.g.cs" Line="6" Column="1" />
-      <File FileName="tests/UnitTests/PoolDinner.Application.UnitTests/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" Line="2" Column="1" />
+      <File FileName="src/PoolDinner.Api/Controllers/MenusController.cs" Line="36" Column="1" />
+      <File FileName="src/PoolDinner.Contracts/Menus/MenuResponse.cs" Line="15" Column="19" />
+      <File FileName="src/PoolDinner.Api/Mapping/MenuMappingConfig.cs" Line="36" Column="1" />
+      <File FileName="src/PoolDinner.Domain/MenuAggregate/Entities/MenuSection.cs" Line="6" Column="25" />
+      <File FileName="src/PoolDinner.Infrastructure/Persistence/Repositories/MenuRepository.cs" Line="18" Column="1" />
+      <File FileName="src/PoolDinner.Application/Menus/Commands/CreateMenu/CreateMenuCommandHandler.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="src/PoolDinner.Domain/MenuAggregate/Menu.cs" Line="11" Column="18" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PoolDinner" selected="True" />
+          <Node name="PoolDinner" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="PoolDinner.Api" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Mapping" expanded="True" />
+              </Node>
+              <Node name="PoolDinner.Application" expanded="True">
+                <Node name="Menus" expanded="True">
+                  <Node name="Commands" expanded="True">
+                    <Node name="CreateMenu" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="PoolDinner.Contracts" expanded="True">
+                <Node name="Menus" expanded="True" />
+              </Node>
+              <Node name="PoolDinner.Domain" expanded="True">
+                <Node name="MenuAggregate" expanded="True">
+                  <Node name="Entities" expanded="True" />
+                </Node>
+                <Node name="Models" expanded="True" />
+              </Node>
+              <Node name="PoolDinner.Infrastructure" expanded="True">
+                <Node name="Persistence" expanded="True">
+                  <Node name="Repositories" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="tests" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
