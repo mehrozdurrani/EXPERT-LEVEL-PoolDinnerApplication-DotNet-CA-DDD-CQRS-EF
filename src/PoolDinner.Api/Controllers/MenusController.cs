@@ -29,7 +29,5 @@ namespace PoolDinner.Api.Controllers
             var response = _mapper.Map<MenuResponse>(createMenuResult);
             return Ok(response);
         }
-
     }
 }
-

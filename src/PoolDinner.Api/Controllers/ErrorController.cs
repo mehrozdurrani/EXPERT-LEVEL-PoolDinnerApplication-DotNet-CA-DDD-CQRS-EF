@@ -13,11 +13,16 @@ namespace PoolDinner.Api.Controllers
             switch (exception)
             {
                 case IServiceException serviceException:
-                    return Problem(serviceException.StatusCode.ToString(), serviceException.ErrorMessage);
+                    return Problem(
+                        serviceException.StatusCode.ToString(),
+                        serviceException.ErrorMessage
+                    );
                 default:
-                    return Problem(StatusCodes.Status500InternalServerError.ToString(), $"Unknown Error: {exception?.Message.ToString()}");
+                    return Problem(
+                        StatusCodes.Status500InternalServerError.ToString(),
+                        $"Unknown Error: {exception?.Message.ToString()}"
+                    );
             }
         }
     }
 }
-
