@@ -9,7 +9,8 @@ namespace PoolDinner.Domain.MenuAggregate.Entities
 
         public string Description { get; private set; }
 
-        private MenuItem(MenuItemId id, string name, string description) : base(id)
+        private MenuItem(MenuItemId id, string name, string description)
+            : base(id)
         {
             Name = name;
             Description = description;

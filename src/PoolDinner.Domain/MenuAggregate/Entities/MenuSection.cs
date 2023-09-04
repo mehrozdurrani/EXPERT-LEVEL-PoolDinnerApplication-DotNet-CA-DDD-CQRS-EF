@@ -12,32 +12,21 @@ namespace PoolDinner.Domain.MenuAggregate.Entities
         public string Description { get; init; }
 
         public IReadOnlyList<MenuItem> Items => _items.AsReadOnly();
-      
-        private MenuSection(
-            MenuSectionId id,
-            string name,
-            string description,
-            List<MenuItem> items) : base(id)
+
+        private MenuSection(MenuSectionId id, string name, string description, List<MenuItem> items)
+            : base(id)
         {
             Name = name;
             Description = description;
             _items = items;
         }
-        public static MenuSection Create(
-            string name,
-            string description,
-            List<MenuItem> items)
+
+        public static MenuSection Create(string name, string description, List<MenuItem> items)
         {
-            return new(
-                MenuSectionId.CreateUnique(),
-                name,
-                description,
-                items);
+            return new(MenuSectionId.CreateUnique(), name, description, items);
         }
-        #pragma warning disable CS8618
-            private MenuSection()
-            {
-            }
-        #pragma warning restore CS8618
+#pragma warning disable CS8618
+        private MenuSection() { }
+#pragma warning restore CS8618
     }
 }

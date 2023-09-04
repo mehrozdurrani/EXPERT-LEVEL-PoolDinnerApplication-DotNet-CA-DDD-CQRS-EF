@@ -13,12 +13,15 @@ namespace PoolDinner.Domain.GuestAggregate.Entities
         public DateTime CreatedDateTime { get; init; }
         public DateTime UpdatedDateTime { get; init; }
 
-        private GuestRating(GuestRatingId id,
+        private GuestRating(
+            GuestRatingId id,
             HostId hostId,
             DinnerId dinnerId,
             double rating,
             DateTime createdDateTime,
-            DateTime updatedDateTime) : base(id)
+            DateTime updatedDateTime
+        )
+            : base(id)
         {
             HostId = hostId;
             DinnerId = dinnerId;
@@ -27,17 +30,16 @@ namespace PoolDinner.Domain.GuestAggregate.Entities
             UpdatedDateTime = updatedDateTime;
         }
 
-        public static GuestRating Create(HostId hostId,
-            DinnerId dinnerId,
-            double rating)
+        public static GuestRating Create(HostId hostId, DinnerId dinnerId, double rating)
         {
-            return new(GuestRatingId.CreateUnique(),
+            return new(
+                GuestRatingId.CreateUnique(),
                 hostId,
                 dinnerId,
                 rating,
                 DateTime.UtcNow,
-                DateTime.UtcNow);
+                DateTime.UtcNow
+            );
         }
     }
 }
-

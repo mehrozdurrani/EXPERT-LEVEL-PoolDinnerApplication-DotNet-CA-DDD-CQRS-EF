@@ -45,7 +45,8 @@ namespace PoolDinner.Domain.DinnerAggregate
 
         public DateTime UpdatedDateTime { get; init; }
 
-        private Dinner(DinnerId id,
+        private Dinner(
+            DinnerId id,
             string name,
             string description,
             DateTime startDateTime,
@@ -61,7 +62,9 @@ namespace PoolDinner.Domain.DinnerAggregate
             string imageUrl,
             Location location,
             DateTime createdTime,
-            DateTime updatedTime):base(id)
+            DateTime updatedTime
+        )
+            : base(id)
         {
             Name = name;
             Description = description;
@@ -81,7 +84,8 @@ namespace PoolDinner.Domain.DinnerAggregate
             UpdatedDateTime = updatedTime;
         }
 
-        public static Dinner Create(string name,
+        public static Dinner Create(
+            string name,
             string description,
             DateTime startDateTime,
             DateTime endDateTime,
@@ -94,10 +98,11 @@ namespace PoolDinner.Domain.DinnerAggregate
             HostId hostId,
             MenuId menuId,
             string imageUrl,
-            Location location)
+            Location location
+        )
         {
-
-            return new(DinnerId.CreateUnique(),
+            return new(
+                DinnerId.CreateUnique(),
                 name,
                 description,
                 startDateTime,
@@ -113,9 +118,8 @@ namespace PoolDinner.Domain.DinnerAggregate
                 imageUrl,
                 location,
                 DateTime.UtcNow,
-                DateTime.UtcNow);
+                DateTime.UtcNow
+            );
         }
-
     }
 }
-

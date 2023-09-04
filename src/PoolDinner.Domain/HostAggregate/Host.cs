@@ -28,15 +28,18 @@ namespace PoolDinner.Domain.HostAggregate
         public DateTime UpdatedDateTime;
 
         public IReadOnlyList<MenuId> MenuIds => _menuIds.AsReadOnly();
-        
+
         public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
-     
-        public Host(HostId hostId,
+
+        public Host(
+            HostId hostId,
             string firstName,
             string lastName,
             string profileImage,
             AverageRating averageRating,
-            UserId userId) : base(hostId)
+            UserId userId
+        )
+            : base(hostId)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -45,20 +48,22 @@ namespace PoolDinner.Domain.HostAggregate
             UserId = userId;
         }
 
-        public static Host Create(string firstName,
+        public static Host Create(
+            string firstName,
             string lastName,
             string profileImage,
             AverageRating averageRating,
-            UserId userId)
+            UserId userId
+        )
         {
-            return new(HostId.CreateUnique(),
+            return new(
+                HostId.CreateUnique(),
                 firstName,
                 lastName,
                 profileImage,
                 averageRating,
-                userId);
-
+                userId
+            );
         }
     }
 }
-

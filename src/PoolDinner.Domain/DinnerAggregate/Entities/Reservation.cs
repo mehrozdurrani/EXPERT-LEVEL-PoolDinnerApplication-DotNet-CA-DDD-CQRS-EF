@@ -21,14 +21,17 @@ namespace PoolDinner.Domain.DinnerAggregate.Entities
 
         public DateTime UpdatedDateTime { get; init; }
 
-        private Reservation(ReservationId id,
+        private Reservation(
+            ReservationId id,
             int guestCount,
             string status,
             GuestRatingId guestId,
             BillId billId,
             DateTime arrivalDateTime,
             DateTime createdDateTime,
-            DateTime updatedDateTime) : base(id)
+            DateTime updatedDateTime
+        )
+            : base(id)
         {
             GuestCount = guestCount;
             Status = status;
@@ -39,11 +42,13 @@ namespace PoolDinner.Domain.DinnerAggregate.Entities
             UpdatedDateTime = updatedDateTime;
         }
 
-        public static Reservation Create(int guestCount,
+        public static Reservation Create(
+            int guestCount,
             string status,
             GuestRatingId guestId,
             BillId billId,
-            DateTime arrivalDateTime)
+            DateTime arrivalDateTime
+        )
         {
             return new(
                 ReservationId.CreateUnique(),
@@ -53,8 +58,8 @@ namespace PoolDinner.Domain.DinnerAggregate.Entities
                 billId,
                 arrivalDateTime,
                 DateTime.UtcNow,
-                DateTime.UtcNow);
+                DateTime.UtcNow
+            );
         }
     }
 }
-

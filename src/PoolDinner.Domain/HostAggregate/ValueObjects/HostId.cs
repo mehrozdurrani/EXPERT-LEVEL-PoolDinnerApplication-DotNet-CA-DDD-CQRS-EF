@@ -13,7 +13,7 @@ namespace PoolDinner.Domain.HostAggregate.ValueObjects
 
         public static HostId Create(Guid id)
         {
-             return new HostId(id);
+            return new HostId(id);
         }
 
         public static HostId CreateUnique()

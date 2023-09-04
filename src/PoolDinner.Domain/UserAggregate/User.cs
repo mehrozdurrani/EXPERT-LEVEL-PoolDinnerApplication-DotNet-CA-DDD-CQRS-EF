@@ -10,11 +10,14 @@ namespace PoolDinner.Domain.UserAggregate
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
 
-        private User(UserId userId,
+        private User(
+            UserId userId,
             string firstName,
             string lastName,
             string email,
-            string password) : base(userId)
+            string password
+        )
+            : base(userId)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -22,17 +25,20 @@ namespace PoolDinner.Domain.UserAggregate
             Password = password;
         }
 
-        public static User Create(string firstName,
-            string lastName,
-            string email,
-            string password)
+        public static User Create(
+            string firstName, 
+            string lastName, 
+            string email, 
+            string password
+            )
         {
-            return new(UserId.CreateUnique(),
-                firstName,
-                lastName,
-                email,
-                password);
+            return new(
+                UserId.CreateUnique(), 
+                firstName, 
+                lastName, 
+                email, 
+                password
+                );
         }
     }
 }
-

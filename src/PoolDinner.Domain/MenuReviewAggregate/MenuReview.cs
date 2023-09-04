@@ -24,7 +24,8 @@ namespace PoolDinner.Domain.MenuReviewAggregate
 
         public DateTime UpdatedDateTime { get; init; }
 
-        private MenuReview(MenuReviewId menuReviewId,
+        private MenuReview(
+            MenuReviewId menuReviewId,
             float rating,
             string comment,
             HostId hostId,
@@ -32,7 +33,9 @@ namespace PoolDinner.Domain.MenuReviewAggregate
             GuestRatingId guestId,
             DinnerId dinnerId,
             DateTime createdDateTime,
-            DateTime updatedDateTime) : base(menuReviewId)
+            DateTime updatedDateTime
+        )
+            : base(menuReviewId)
         {
             Rating = rating;
             Comment = comment;
@@ -43,14 +46,18 @@ namespace PoolDinner.Domain.MenuReviewAggregate
             CreatedDateTime = createdDateTime;
             UpdatedDateTime = updatedDateTime;
         }
-        public static MenuReview Create(float rating,
+
+        public static MenuReview Create(
+            float rating,
             string comment,
             HostId hostId,
             MenuId menuId,
             GuestRatingId guestId,
-            DinnerId dinnerId)
+            DinnerId dinnerId
+        )
         {
-            return new(MenuReviewId.CreateUnique(),
+            return new(
+                MenuReviewId.CreateUnique(),
                 rating,
                 comment,
                 hostId,
@@ -58,9 +65,8 @@ namespace PoolDinner.Domain.MenuReviewAggregate
                 guestId,
                 dinnerId,
                 DateTime.UtcNow,
-                DateTime.UtcNow);
+                DateTime.UtcNow
+            );
         }
-
     }
 }
-

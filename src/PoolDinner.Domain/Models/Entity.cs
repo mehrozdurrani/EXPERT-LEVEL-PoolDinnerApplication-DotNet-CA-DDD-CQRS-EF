@@ -36,9 +36,7 @@
             return Id.GetHashCode();
         }
 #pragma warning disable CS8618
-        protected Entity()
-        {
-        }
+        protected Entity() { }
 #pragma warning restore CS8618
     }
 }
