@@ -12,4 +12,3 @@ namespace PoolDinner.Application.Menus.Commands.CreateMenu
         }
     }
 }
-

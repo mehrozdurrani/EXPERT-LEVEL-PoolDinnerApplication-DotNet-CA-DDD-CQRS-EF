@@ -15,21 +15,32 @@ namespace PoolDinner.Application.Menus.Commands.CreateMenu
             _menuRepository = menuRepository;
         }
 
-        public async Task<Menu> Handle(CreateMenuCommand request, CancellationToken cancellationToken)
+        public async Task<Menu> Handle(
+            CreateMenuCommand request,
+            CancellationToken cancellationToken
+        )
         {
-            await Task.CompletedTask; // temporary to remove warning
+            // Temporary to remove warning
+            await Task.CompletedTask;
 
             // Create Menu
             var menu = Menu.Create(
                 HostId.Create(request.HostId),
                 request.Name,
                 request.Description,
-                request.Sections.Select(
-                    section => MenuSection.Create(
-                        section.Name,
-                    section.Description,
-                    section.Items.Select(
-                        items => MenuItem.Create(items.Name, items.Description)).ToList())).ToList());
+                request.Sections
+                    .Select(
+                        section =>
+                            MenuSection.Create(
+                                section.Name,
+                                section.Description,
+                                section.Items
+                                    .Select(items => MenuItem.Create(items.Name, items.Description))
+                                    .ToList()
+                            )
+                    )
+                    .ToList()
+            );
 
             // Persist Menu
             _menuRepository.Add(menu);
@@ -39,4 +50,3 @@ namespace PoolDinner.Application.Menus.Commands.CreateMenu
         }
     }
 }
-

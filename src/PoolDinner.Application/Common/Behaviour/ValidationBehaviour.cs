@@ -4,8 +4,7 @@ using MediatR;
 
 namespace PoolDinner.Application.Common.Behaviour
 {
-    public class ValidationBehaviour<TRequest, TResponse> :
-        IPipelineBehavior<TRequest, TResponse>
+    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
         where TResponse : class
     {
@@ -15,7 +14,12 @@ namespace PoolDinner.Application.Common.Behaviour
         {
             _validator = validator;
         }
-        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+
+        public async Task<TResponse> Handle(
+            TRequest request,
+            RequestHandlerDelegate<TResponse> next,
+            CancellationToken cancellationToken
+        )
         {
             if (_validator == null)
             {
@@ -35,11 +39,14 @@ namespace PoolDinner.Application.Common.Behaviour
 
             throw new InvalidRegisterInputException();
         }
-
     }
 }
 
-
+/*
+IMPORTANT:
+Below is the sameple code if a particular command and authenticationResult 
+are intended to be configured
+*/
 
 //namespace BuberDinner.Application.Common.Behaviour
 //{
