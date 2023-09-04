@@ -8,4 +8,3 @@ namespace PoolDinner.Application.Common.Errors
         public string ErrorMessage { get; }
     }
 }
-

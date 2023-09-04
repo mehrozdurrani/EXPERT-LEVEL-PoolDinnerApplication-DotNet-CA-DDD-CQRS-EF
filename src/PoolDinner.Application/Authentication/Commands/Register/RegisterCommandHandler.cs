@@ -13,13 +13,19 @@ namespace PoolDinner.Application.Authentication.Commands.Register
 
         private readonly IUserRepository _userRepository;
 
-        public RegisterCommandHandler(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+        public RegisterCommandHandler(
+            IJwtTokenGenerator jwtTokenGenerator,
+            IUserRepository userRepository
+        )
         {
             _jwtTokenGenerator = jwtTokenGenerator;
             _userRepository = userRepository;
         }
 
-        public async Task<AuthenticationResult> Handle(RegisterCommand request, CancellationToken cancellationToken)
+        public async Task<AuthenticationResult> Handle(
+            RegisterCommand request,
+            CancellationToken cancellationToken
+        )
         {
             await Task.CompletedTask; // temporary to remove warning
 
@@ -31,21 +37,22 @@ namespace PoolDinner.Application.Authentication.Commands.Register
             }
 
             // 2. Create User (generate unique ID)
-
             var user = User.Create(
                 request.FirstName,
                 request.LastName,
                 request.Email,
-                request.Password);
-
+                request.Password
+            );
             _userRepository.Add(user);
 
             // 3. Create JWT Token
             Guid userId = Guid.NewGuid();
-            var token = _jwtTokenGenerator.GenerateToken(userId, request.FirstName, request.LastName);
-
+            var token = _jwtTokenGenerator.GenerateToken(
+                userId,
+                request.FirstName,
+                request.LastName
+            );
             return new AuthenticationResult(user, token);
         }
     }
 }
-

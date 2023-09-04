@@ -7,15 +7,14 @@ namespace PoolDinner.Application.Menus.Commands.CreateMenu
         Guid HostId,
         string Name,
         string Description,
-        List<CreateMenuSectionCommand> Sections) : IRequest<Menu>;
+        List<CreateMenuSectionCommand> Sections
+    ) : IRequest<Menu>;
 
     public record CreateMenuSectionCommand(
         string Name,
         string Description,
-        List<CreateMenuItemsCommand> Items);
+        List<CreateMenuItemsCommand> Items
+    );
 
-    public record CreateMenuItemsCommand(
-        string Name,
-        string Description);
+    public record CreateMenuItemsCommand(string Name, string Description);
 }
-
