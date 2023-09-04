@@ -9,10 +9,11 @@ namespace PoolDinner.Domain.DinnerAggregate.ValueObjects
         public string Latitude { get; private set; }
         public string Longitude { get; private set; }
 
-        public Location(string name,
-            string address,
-            string latitude,
-            string longitude)
+        public Location(string name, 
+        string address, 
+        string latitude, 
+        string longitude
+        )
         {
             Name = name;
             Address = address;
@@ -29,4 +30,3 @@ namespace PoolDinner.Domain.DinnerAggregate.ValueObjects
         }
     }
 }
-
