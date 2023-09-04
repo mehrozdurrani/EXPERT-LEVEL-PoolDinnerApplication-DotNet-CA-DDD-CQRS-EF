@@ -33,6 +33,14 @@ The application simulates a dinner pooling/ management system similar to service
 2. Build and run the application using .NET 7.
 3. Explore the codebase to learn about Clean Architecture, DDD, and CQRS principles.
 
+## Usage
+**Endpoints**
+- ```POST {{host}}/auth/register``` : Registers a new user and returns valid JWT.
+- ```POST {{host}}/auth/login``` : Login user with valid token.
+- ```POST {{host}}/hosts/{hostId}/menu``` : Creates new menu with the provided hostId.
+- ```GET {{host}}/dinners``` : Fetch list of all the dinners.
+- **Other endpoints are under progress**
+
 ## How to Contribute
 
 **Contributions are not currently accepted for this project.**
