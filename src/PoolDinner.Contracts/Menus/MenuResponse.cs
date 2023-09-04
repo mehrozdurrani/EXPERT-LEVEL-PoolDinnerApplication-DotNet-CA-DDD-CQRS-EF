@@ -10,18 +10,19 @@
         DateTime CreatedDateTime,
         DateTime UpdatedDateTime,
         List<string> DinnerIds,
-        List<string> MenuReviewIds);
-    
+        List<string> MenuReviewIds
+    );
+
     public record MenuSectionResponse(
         string Id,
         string Name,
         string Description,
-        List<MenuItemResponse> Items);
+        List<MenuItemResponse> Items
+    );
 
     public record MenuItemResponse(
         string Id,
         string Name,
-        string Description);
-    
+        string Description
+    );
 }
-
