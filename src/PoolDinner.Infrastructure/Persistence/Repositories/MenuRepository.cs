@@ -5,7 +5,7 @@ using PoolDinner.Domain.MenuAggregate;
 
 namespace PoolDinner.Infrastructure.Persistence.Repositories
 {
-    public class MenuRepository: IMenuRepository
+    public class MenuRepository : IMenuRepository
     {
         private readonly DbContext _dbContext;
 
@@ -13,6 +13,7 @@ namespace PoolDinner.Infrastructure.Persistence.Repositories
         {
             _dbContext = dbContext;
         }
+
         public void Add(Menu menu)
         {
             _dbContext.Add(menu);
@@ -20,4 +21,3 @@ namespace PoolDinner.Infrastructure.Persistence.Repositories
         }
     }
 }
-
