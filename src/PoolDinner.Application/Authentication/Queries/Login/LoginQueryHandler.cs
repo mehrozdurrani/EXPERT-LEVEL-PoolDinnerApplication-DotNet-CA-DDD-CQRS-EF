@@ -9,17 +9,22 @@ namespace PoolDinner.Application.Authentication.Queries
 {
     public class LoginQueryHandler : IRequestHandler<LoginQuery, AuthenticationResult>
     {
-
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
         private readonly IUserRepository _userRepository;
 
-        public LoginQueryHandler(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+        public LoginQueryHandler(
+            IJwtTokenGenerator jwtTokenGenerator,
+            IUserRepository userRepository
+        )
         {
             _jwtTokenGenerator = jwtTokenGenerator;
             _userRepository = userRepository;
         }
 
-        public async Task<AuthenticationResult> Handle(LoginQuery request, CancellationToken cancellationToken)
+        public async Task<AuthenticationResult> Handle(
+            LoginQuery request,
+            CancellationToken cancellationToken
+        )
         {
             await Task.CompletedTask; // temporary to remove warning
 
@@ -39,10 +44,13 @@ namespace PoolDinner.Application.Authentication.Queries
 
             // 3. Create JWT Token
 
-            var token = _jwtTokenGenerator.GenerateToken(user.Id.Value, user.FirstName, user.LastName);
+            var token = _jwtTokenGenerator.GenerateToken(
+                user.Id.Value,
+                user.FirstName,
+                user.LastName
+            );
 
             return new AuthenticationResult(user, token);
         }
     }
 }
-
