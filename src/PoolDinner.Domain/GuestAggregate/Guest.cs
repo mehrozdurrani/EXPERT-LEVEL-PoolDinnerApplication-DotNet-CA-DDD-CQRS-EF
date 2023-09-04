@@ -28,25 +28,28 @@ namespace PoolDinner.Domain.GuestAggregate
         private readonly List<MenuReviewId> _menuReviewIds = new();
 
         public IReadOnlyList<DinnerId> UpcomingDinnerIds => _upcomingDinnerIds.AsReadOnly();
-        
+
         public IReadOnlyList<DinnerId> PastDinnerIds => _pastDinnerIds.AsReadOnly();
 
         public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
 
         public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
-    
+
         public DateTime CreatedDateTime;
 
         public DateTime UpdatedDateTime;
 
-        private Guest(GuestId id,
+        private Guest(
+            GuestId id,
             string firstName,
             string lastName,
             string profileImageUrl,
             double rating,
             UserId userId,
             DateTime createdDateTime,
-            DateTime updatedDateTime) : base(id)
+            DateTime updatedDateTime
+        )
+            : base(id)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -57,22 +60,24 @@ namespace PoolDinner.Domain.GuestAggregate
             UpdatedDateTime = updatedDateTime;
         }
 
-        public static Guest Create(string firstName,
+        public static Guest Create(
+            string firstName,
             string lastName,
             string profileImageUrl,
             double rating,
-            UserId userId)
+            UserId userId
+        )
         {
-
-            return new(GuestId.CreateUnique(),
+            return new(
+                GuestId.CreateUnique(),
                 firstName,
                 lastName,
                 profileImageUrl,
                 rating,
                 userId,
                 DateTime.UtcNow,
-                DateTime.UtcNow);
+                DateTime.UtcNow
+            );
         }
     }
 }
-

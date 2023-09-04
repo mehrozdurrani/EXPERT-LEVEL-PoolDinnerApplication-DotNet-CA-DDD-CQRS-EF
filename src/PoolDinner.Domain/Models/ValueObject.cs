@@ -18,8 +18,7 @@
 
             var other = (ValueObject)obj;
 
-            return GetEqualityComponents().
-                SequenceEqual(other.GetEqualityComponents());
+            return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
         }
 
         public override int GetHashCode()
@@ -28,7 +27,6 @@
                 .Select(x => x != null ? x.GetHashCode() : 0)
                 .Aggregate((x, y) => x ^ y);
         }
-
 
         public static bool operator ==(ValueObject left, ValueObject right)
         {
@@ -41,4 +39,3 @@
         }
     }
 }
-
