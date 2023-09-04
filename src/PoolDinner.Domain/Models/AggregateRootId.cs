@@ -5,4 +5,3 @@
         public abstract TIdType Value { get; protected set; }
     }
 }
-

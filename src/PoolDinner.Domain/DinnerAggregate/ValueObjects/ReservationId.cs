@@ -15,10 +15,10 @@ namespace PoolDinner.Domain.DinnerAggregate.ValueObjects
         {
             return new(Guid.NewGuid());
         }
+
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Value;
         }
     }
 }
-

@@ -34,14 +34,17 @@ namespace PoolDinner.Domain.MenuAggregate
 
         public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
 
-        private Menu(MenuId id,
+        private Menu(
+            MenuId id,
             HostId hostId,
             string name,
             string description,
             AverageRating averageRating,
             List<MenuSection> sections,
             DateTime createdDateTime,
-            DateTime updatedDateTime) : base(id)
+            DateTime updatedDateTime
+        )
+            : base(id)
         {
             HostId = hostId;
             Name = name;
@@ -52,28 +55,27 @@ namespace PoolDinner.Domain.MenuAggregate
             UpdatedDateTime = updatedDateTime;
         }
 
-        public static Menu Create(HostId hostId,
+        public static Menu Create(
+            HostId hostId,
             string name,
             string description,
-            List<MenuSection> sections)
+            List<MenuSection> sections
+        )
         {
-            return new(MenuId.CreateUnique(),
+            return new(
+                MenuId.CreateUnique(),
                 hostId,
                 name,
                 description,
                 AverageRating.CreateNew(),
                 sections,
                 DateTime.UtcNow,
-                DateTime.UtcNow);
+                DateTime.UtcNow
+            );
         }
 
-        #pragma warning disable CS8618
-            private Menu()
-            {
-            }
-        #pragma warning restore CS8618
-
+#pragma warning disable CS8618
+        private Menu() { }
+#pragma warning restore CS8618
     }
-
 }
-
