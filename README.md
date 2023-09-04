@@ -8,6 +8,9 @@ This project is a practical exploration of Clean Architecture and Domain-Driven 
 
 The project is inspired by a YouTube video by 'Amichai Mantinband' and has been extended with my own implementation.
 
+## Support Material for DDD
+[Event Storming Document](https://www.figma.com/file/Xj1WCi3gBLszQvpkbXStYY/Pool-Dinner?type=design&node-id=0%3A1&mode=design&t=1Kb5xAMe5gCsns0b-1) on figma.
+
 ## Technologies Used
 
 - .NET 7
