@@ -19,4 +19,3 @@ namespace PoolDinner.Api.Mapping
         }
     }
 }
-

@@ -28,11 +28,10 @@ public class AuthenticationController : ApiController
     public async Task<IActionResult> Login(LoginRequest request)
     {
         // Call authentication service's login method
-
         //var query = new LoginQuery(request.Email, request.Password);
+        // OR
 
         var query = _mapper.Map<LoginQuery>(request);
-        AuthenticationResult authResult = await _mediator.Send(query);
 
         //AuthenticationResponse response = new(
         //            authResult.user.Id,
@@ -40,7 +39,9 @@ public class AuthenticationController : ApiController
         //            authResult.user.LastName,
         //            authResult.user.Email,
         //            authResult.Token);
+        //OR
 
+        AuthenticationResult authResult = await _mediator.Send(query);
         var response = _mapper.Map<AuthenticationResponse>(authResult);
         return Ok(response);
     }
@@ -54,10 +55,9 @@ public class AuthenticationController : ApiController
         //    request.LastName,
         //    request.Email,
         //    request.Password);
+        // OR
 
         var command = _mapper.Map<RegisterCommand>(request);
-
-        AuthenticationResult authResult = await _mediator.Send(command);
 
         //AuthenticationResponse response = new(
         //            authResult.user.Id,
@@ -65,9 +65,10 @@ public class AuthenticationController : ApiController
         //            authResult.user.LastName,
         //            authResult.user.Email,
         //            authResult.Token);
+        // OR
 
+        AuthenticationResult authResult = await _mediator.Send(command);
         var response = _mapper.Map<AuthenticationResponse>(authResult);
-
         return Ok(response);
     }
 };
