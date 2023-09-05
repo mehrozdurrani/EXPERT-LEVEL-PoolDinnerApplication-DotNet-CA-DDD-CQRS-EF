@@ -13,3 +13,4 @@ Thumbs.db
 .vs/
 config
 config.pub
+.DS_Store
