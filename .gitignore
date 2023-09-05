@@ -16,5 +16,8 @@ Thumbs.db
 .vs/
 config
 config.pub
+<<<<<<< HEAD
 .DS_Store
 appsettings.json
+=======
+>>>>>>> b492118 (Updated .gitignore and removed doc.config)
