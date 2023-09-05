@@ -11,3 +11,5 @@ obj/
 Thumbs.db
 .env
 .vs/
+config
+config.pub
