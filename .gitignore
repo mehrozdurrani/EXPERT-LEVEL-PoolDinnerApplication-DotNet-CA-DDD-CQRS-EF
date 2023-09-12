@@ -1,9 +1,6 @@
 bin/
 obj/
-<<<<<<< HEAD
 .vs/
-=======
->>>>>>> bf36985 (First PoolDinner Application Project Commit)
 .vscode/
 *.dll
 *.exe
@@ -16,8 +13,5 @@ Thumbs.db
 .vs/
 config
 config.pub
-<<<<<<< HEAD
 .DS_Store
 appsettings.json
-=======
->>>>>>> b492118 (Updated .gitignore and removed doc.config)
